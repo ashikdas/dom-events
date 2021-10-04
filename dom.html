@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Explore Dom</h1>
+            <P id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, modi.</P>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </section>
+    </main>
+    <script>
+        var first = document.getElementById('first');
+        first.style.backgroundColor = 'yellow';
+        first.style.color = 'green';
+        first.style.fontSize ='35px'
+        // DOM => Document Object Model
+        console.log(document.body)
+    </script>
+</body>
+</html>
