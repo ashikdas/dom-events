@@ -5,22 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore DOM</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin :5px;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <main>
         <section>
-            <h1>Explore Dom</h1>
-            <P id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, modi.</P>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <h3>Explore Dom</h3>
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores illum delectus fuga pariatur quae aliquam hic ea, mollitia porro, atque consequatur dignissimos amet modi veniam dolorem unde sapiente voluptates iure.</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Accusantium beatae nobis praesentium. Voluptatibus et nihil delectus ut rerum impedit, nulla ipsum assumenda, ratione mollitia veritatis quaerat velit quas dolor consequuntur amet. Numquam eaque repudiandae maxime, est sint esse?</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Magnam quisquam iste vitae, cumque blanditiis quod earum aut repellat. Laborum reiciendis saepe magnam repellendus, quis nostrum ad recusandae nisi quos nam asperiores consectetur harum error reprehenderit perspiciatis impedit. Quod?</p>
+            </article>
         </section>
     </main>
     <script>
-        var first = document.getElementById('first');
-        first.style.backgroundColor = 'yellow';
-        first.style.color = 'green';
-        first.style.fontSize ='35px'
-        // DOM => Document Object Model
-        console.log(document.body)
+        var authors = document.getElementsByClassName('author');
+        for(var i = 0; i< authors.length; i++){
+            var element = authors[i];
+            console.log(element.innerHTML);
+            element.innerHTML = 'Lekhok-'+ i;
+            element.style.backgroundColor = 'lightblue';
+            element.style.margin = '10px';
+        }
     </script>
 </body>
 </html>
