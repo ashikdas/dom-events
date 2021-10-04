@@ -23,7 +23,7 @@
             <h3>Explore Dom</h3>
             <article>
                 <h3>article-1</h3>
-                <p class="author">author-1</p>
+                <p title="I am the most important Author"class="author" id="bestSeller">author-1</p>
                 <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores illum delectus fuga pariatur quae aliquam hic ea, mollitia porro, atque consequatur dignissimos amet modi veniam dolorem unde sapiente voluptates iure.</p>
             </article>
             <article class="special">
@@ -44,6 +44,7 @@
             var element = authors[i];
             // console.log(element.innerHTML);
             element.innerHTML = 'Lekhok-'+ i;
+            element.setAttribute('title', 'All Author is same')
             element.style.backgroundColor = 'lightblue';
             element.style.margin = '10px';
         }
